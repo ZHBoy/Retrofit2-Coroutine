@@ -11,14 +11,13 @@ class ApiConstants private constructor() {
 
         const val IS_DEBUG = true
 
-        const val IS_XIAOMI = true
-
+        //可以换成自己的host
         const val BASE_URL = "https://caledndardes.zyhzdm.net/"
 
-        //用户登陆接口
+        //可以换成自己的path
         const val API_URL_USER_LOGIN = "user/login"
 
-        //商品接口
+        //可以换成自己的path
         const val API_URL_GOOD_INFO = "calendar/otherFunction/getOnlineSpecialGoods"
 
     }

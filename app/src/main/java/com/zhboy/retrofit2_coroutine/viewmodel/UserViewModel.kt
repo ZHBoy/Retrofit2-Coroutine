@@ -37,4 +37,22 @@ class UserViewModel : ViewModel() {
 
         this.emitSource(liveData)
     }
+
+    fun getUserInfo(userName: String, password: String) = liveData {
+        val liveData = viewModelScope.simpleRequestLiveData<String> {
+
+            // 加载数据库缓存，直接返回 room 数据库的 LiveData
+//            loadCache {
+//                return@loadCache roomLiveData
+//            }
+
+            // 保存数据到 room 数据库
+//            saveCache {
+//            }
+
+            api { service.userLogin(userName,password) }
+        }
+
+        this.emitSource(liveData)
+    }
 }
